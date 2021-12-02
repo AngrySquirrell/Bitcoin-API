@@ -30,7 +30,7 @@ var req = new XMLHttpRequest();
      
     }
 
-    setInterval(request, 5000);
+    setInterval(request, 500);
 
 function verify(){
     cnt+=1
