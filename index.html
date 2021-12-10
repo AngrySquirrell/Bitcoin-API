@@ -1,30 +1,60 @@
-<!DOCTYPE html>
 <html lang="en">
+<!DOCTYPE html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <title>Bitcoin API</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="assets/styles/fonts.css">
+	<title>Bitcoin API</title>
+	<link rel="shortcut icon" type="image/x-icon" href="./favicon-bitcoin.png">
 </head>
 
-<header style="width:100%; background-color: rgb(68, 173, 173); height:120px;">
-    <div style="display: flex; flex-direction: row;">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c5/Bitcoin_logo.svg" style="padding: 24px 0px 0px 0px;">
-    <h1 style="margin:48px 0px 0px 16px;color:lightgray"> to Euro Converter API </h1>
-    </div>
-</header>
-
 <body>
+	<div>
+		<!-- <span id="test"></span></br> -->
+		1 Bitcoin = <span id="coursBTC">...</span> Euros (€) </br>
+        1 Euro = <span id="coursEUR">...</span> Bitcoins (₿) </br>
+        <span id="erreur"></span>
+        Stockage : <span id="storage"></span></br>
+        <button onclick="stockage()"> Refresh storage</button>
+    </div>
 
     <div>
-        <span id="test"></span></br>
-        1 Bitcoin = <span id="coursBTC">...</span> Euros.</br>
-        1 Euro = <span id="coursEUR">...</span> Bitcoins. </br>
-        <span id="erreur"></span>
-        <button onclick="verify()"> Refresh </button>
-    </div>
-    <script src="assets/js/main.js"></script>
-</body>
+      <canvas id="myChart" width="400" height="400"></canvas>
+      <script>
+// window.onload = function Bchart () {
+// var chart = new CanvasJS.Chart("chartContainer", {
+// 	animationEnabled: true,
+// 	theme: "light2",
+// 	title:{
+// 		text: "Bitcoin chart over 10 last minutes"
+// 	},
+// 	data: [{        
+// 		type: "line",
+//       	indexLabelFontSize: 16,
+// 		dataPoints: [
+//       { y: },
+//       { y: },
+//       { y: },
+//       { y: },
+//       { y: },
+//       { y: },
+//       { y: },
+//       { y: },
+//       { y: },
+//       { y: }
+// 		]
+// 	}]
+// });
+// chart.render();
 
+// setInterval(Bchart(), 60000)
+// }
+</script>
+<div id="chartContainer" style="height: 370px; width: 100%;"></div>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+<script src="./assets/scripts/main.js"></script>
+  </div>
+</body>
 </html>
